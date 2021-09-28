@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+}
+
+#wrapper {
+    background-color: rgb(236, 236, 236);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 15px;
+    margin: 0px 0px 0px 0px;
+    width: 320px;
+    height: 400px;
+    max-height: 600px;
+}
+
+#mp-header {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+#mp-imgcenter {
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(236, 224, 205, 0.3);
+}
