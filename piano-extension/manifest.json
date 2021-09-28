@@ -1,0 +1,20 @@
+{
+    "name": "MPP",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.multiplayerpiano.com/*",
+                "https://*.multiplayerpiano.net/*",
+                "https://*.mppclone.com/*"
+            ],
+            "js": [ "index.js" ]
+        }
+    ],
+    "web_accessible_resources": [ ],
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "MPP"
+    }
+}
