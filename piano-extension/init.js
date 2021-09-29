@@ -9,8 +9,8 @@
     const extension = chrome.extension;
 
     function appendScript (element){
-        const head = document.head || document.getElementsByTagName('head')[0] || document.documentElement;
-        head.insertBefore(element, head.lastChild);
+        const body = document.body || document.getElementsByTagName('body')[0] || document.documentElement;
+        body.insertBefore(element, body.lastChild);
     };
 
     for (let i = 0; i < scripts.length; i++) {
