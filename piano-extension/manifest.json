@@ -10,9 +10,11 @@
     "content_scripts": [
         {
             "matches": [
-                "https://*.multiplayerpiano.com/*",
-                "https://*.multiplayerpiano.net/*",
-                "https://*.mppclone.com/*"
+                "*://*.mpp.terrium.net/*",
+                "*://*.multiplayerpiano.com/*",
+                "*://*.multiplayerpiano.net/*",
+                "*://*.mppclone.com/*",
+                "*://*.mpp.hri7566.info/*"
             ],
             "js": [ "index.js" ]
         }
