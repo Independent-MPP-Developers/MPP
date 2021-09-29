@@ -17,10 +17,10 @@
                 "*://*.mppclone.com/*",
                 "*://*.mpp.hri7566.info/*"
             ],
-            "js": [ "index.js" ]
+            "js": [ "init.js" ]
         }
     ],
-    "web_accessible_resources": [ ],
+    "web_accessible_resources": [ "index.js" ],
     "browser_action": {
         "default_popup": "index.html",
         "default_title": "MPP"
