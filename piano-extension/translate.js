@@ -18,9 +18,11 @@
 
         for(const id in TRAN_TABLE){
             const translateResult = TRAN_TABLE[id];
-            const translateElement = document.querySelector(`[t="${id}"]`);
-
-            translateElement.innerText =  translateResult[languageIndex];
+            const translateList = document.querySelectorAll(`[t="${id}"]`);
+            
+            for(const element of translateList){
+                element.innerText =  translateResult[languageIndex];
+            };
         };
 
         return true;
