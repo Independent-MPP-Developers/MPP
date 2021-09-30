@@ -27,6 +27,7 @@
     };
 
     const language = navigator.language.substr(0, 2);
+    /* Note we are ignoring localization for now */
     setLanguage(language);
 
     window.setLanguage = setLanguage;
