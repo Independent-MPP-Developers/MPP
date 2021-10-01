@@ -42,6 +42,35 @@ body {
     margin-top: 5px;
 }
 
+#mp-settingtab {
+  background-color: rgb(236, 236, 236);
+  text-align: right;
+}
+
+#imgsettingsbtn {
+    margin-right: 7px
+}
+
+#mp-textdarksetting {
+  display: inline-block;
+  font-size: 14px;
+}
+
+#mp-settingchng {
+  background-color: rgb(190, 241, 245);
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid rgb(166, 213, 216);
+}
+
+#imgsettingsbackbtn {
+  margin-right: 7px;
+}
+
+
 .switch {
   position: relative;
   display: inline-block;

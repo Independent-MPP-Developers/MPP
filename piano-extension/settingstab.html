@@ -14,17 +14,27 @@
             <img src="icon (48).png" alt="mpp_logo">
         </div>
         <div t="1" id="mp-header">Multiplayer Piano Extension</div>
-        <div t="2" id="mp-startheader">Activate the extension</div>
-        <div id="mp-buttonload">
-            <label class="switch">
-                <input type="checkbox" id="mp-activate">
-                <span class="slider round"></span>
-              </label>
+        <div t="3" id="mp-startheader">Extension settings</div>
+        <div id="mp-settingchng">
+            <table>
+                <tr>
+                    <td>
+                        <div t="4" id="mp-textdarksetting">Activate dark mode</div>
+                    </td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" id="mp-activate-1">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div id="result"></div>
     </div>
+    
     <div id="mp-settingtab">
-        <a name="#main-settings" href="settingstab.html"><input id="imgsettingsbtn" type="image" src="imgsettings.svg"></input></a>
+        <a name="#settings-main" href="index.html"><input id="imgsettingsbackbtn" type="image" src="arrow-circle-left.svg"></input></a>
     </div>
     <script src="activate.js"></script>
     <script src="translate.js"></script>

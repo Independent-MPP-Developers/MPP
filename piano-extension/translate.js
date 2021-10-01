@@ -7,6 +7,14 @@
         "2": [
             "Activate the extension",
             "Активировать расширение"
+        ],
+        "3":[
+            "Extension settings",
+            "Настройки расширения"
+        ],
+        "4":[
+            "Activate dark mode",
+            "Активировать темный режим"
         ]
     };
     const languages = ["en", "ru"]
