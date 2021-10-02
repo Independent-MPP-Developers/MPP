@@ -21,6 +21,7 @@
         }
     ],
     "web_accessible_resources": [ "index.js" ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js; object-src 'self'",
     "browser_action": {
         "default_popup": "index.html",
         "default_title": "MPP"
