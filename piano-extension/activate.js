@@ -1,35 +1,51 @@
-(async function (window){
+(function (window) {
     const storage = window.chrome.storage; // Grab chrome storage
-    const activateStorageKey = 'mp-A_STATE'; // Storage key for whether run scripts or not
-    const activationButton = document.getElementById('mp-activate');
-    const defaultState = true;
+    var inputButtons = $('input[save=""]');
 
-    function chromeStorageSet(object){ // Set chrome storage object via promise
-        const asyncPromise = new Promise((resolve) => {
-            chrome.storage.sync.set(object, () => { resolve(true) });
+    function chromeStorageSet(object) { // Set chrome storage object via promise
+        return new Promise(resolve => {
+            storage.sync.set(object, _ => resolve(true));
         });
-        return asyncPromise
     };
-    
-    function chromeStorageGet(key){ // Get chrome storage object via promise
-        const asyncPromise = new Promise((resolve) => {
-            storage.sync.get(key, (result) => { resolve(result) });
+
+    function chromeStorageGet(key) { // Get chrome storage object via promise
+        return new Promise(resolve => {
+            storage.sync.get(key, result => resolve(result));
         });
-        return asyncPromise
     };
 
-    function setScriptState(){
-        const scriptActivated = activationButton.checked
-        chromeStorageSet({ [activateStorageKey]: scriptActivated });
-        dispatchEvent(new CustomEvent('mp-activate', { detail: scriptActivated })); // Change later..? idk how were doing the logic right now
+    function handleEvent(name, detail) {
+        if (!name) { return; };
+        var event = new CustomEvent(name, { detail });
+        dispatchEvent(event);
     };
 
-    const buttonState = (await chromeStorageGet([activateStorageKey]))[activateStorageKey];
-    if (buttonState === undefined) // First time loaded
-        await chromeStorageSet({ [activateStorageKey]: defaultState });
-    
-    activationButton.checked = buttonState || false;
-    activationButton.addEventListener('change', setScriptState);
+    async function setState(buttons, custom) {
+        buttons = Array.from(buttons);
+        for (let i = 0; i < buttons.length; i++) {
+            let button = buttons[i];
+            var key = button.id;
+            var event = button.getAttribute('event');
+            var state = custom || (await chromeStorageGet(key))[key] || false;
+
+            button.checked = state;
+            handleEvent(event, state);
+        };
+    }
+
+    function newState(event) {
+        var button = event.target;
+        var state = button.checked;
+        var event = button.getAttribute('event');
+        var key = button.id
+
+        chromeStorageSet({ [key]: state });
+        setState(button, state);
+        handleEvent(event, state);
+    };
+
+    inputButtons.on('change', newState);
+    setState(inputButtons);
 
     window.chromeStorageGet = chromeStorageGet; /* "Export" promise functions for use in other scripts */
     window.chromeStorageSet = chromeStorageSet;
