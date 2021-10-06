@@ -4,8 +4,8 @@
     "manifest_version": 2,
     "description": "Extension for multiplayer piano",
     "icons": {
-        "128": "icon (128).png",
-        "48": "icon (48).png"
+        "128": "assets/icon (128).png",
+        "48": "assets/icon (48).png"
     },
     "permissions": [ "storage" ],
     "content_scripts": [
@@ -17,13 +17,13 @@
                 "*://*.mppclone.com/*",
                 "*://*.mpp.hri7566.info/*"
             ],
-            "js": [ "init.js" ]
+            "js": [ "scripts/init.js" ]
         }
     ],
-    "web_accessible_resources": [ "index.js" ],
-    "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js; object-src 'self'",
+    "web_accessible_resources": [ "scripts/index.js" ],
+    "content_security_policy": "script-src 'self' https://kit.fontawesome.com/cc0302d791.js; object-src 'self'",
     "browser_action": {
-        "default_popup": "index.html",
+        "default_popup": "pages/browse.html",
         "default_title": "MPP"
     }
 }
