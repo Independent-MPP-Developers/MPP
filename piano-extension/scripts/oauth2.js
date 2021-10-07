@@ -5,7 +5,7 @@
 
     var clientID = encodeURIComponent('1054187376334-b1oujbk5a837nt6o8vcfo6e5bbrpv1og.apps.googleusercontent.com');
     var IDToken = encodeURIComponent('id_token');
-    var redirect = encodeURIComponent('https://ifacgfmfdlghfdpohnjfncnkhjbnekog.chromiumapp.org/pages/browse.html');
+    var redirect = encodeURIComponent(`https://${chrome.runtime.id}.chromiumapp.org/pages/browse.html`);
     var scope = encodeURIComponent('openid');
     var state = encodeURIComponent('meet' + Math.random().toString(36).substring(2, 15));
     var prompt = encodeURIComponent('consent');
