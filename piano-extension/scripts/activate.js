@@ -44,8 +44,8 @@
         handleEvent(event, state);
     };
 
-    inputButtons.on('change', newState);
-    setState(inputButtons);
+    // inputButtons.on('change', newState);
+    // setState(inputButtons);
 
     window.chromeStorageGet = chromeStorageGet; /* "Export" promise functions for use in other scripts */
     window.chromeStorageSet = chromeStorageSet;

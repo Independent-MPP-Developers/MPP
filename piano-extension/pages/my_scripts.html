@@ -1,12 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPP | My Scripts</title>
-</head>
-<body>
     
+    <!-- Bulma -->
+    <link rel="stylesheet" href="../styles/bulma.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cc0302d791.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="../scripts/jQuery.js"></script>
+    <!-- CSS Javascript -->
+    <script src="../scripts/css-response.js"></script>
+    <!-- OAuth Deserialize -->
+    <script src="../scripts/jsrsasign.js"></script>
+
+    <style>
+        .button.is-floating {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 100px;
+            text-align: center;
+            font-size: 1.6rem;
+            box-shadow: 0 .0625em .125em rgba(10, 10, 10, .05);
+            z-index: 3
+        }
+
+        .button.is-floating.is-large {
+            width: 90px;
+            height: 90px;
+            font-size: 2.6rem
+        }
+
+        .button.is-floating.is-medium {
+            width: 75px;
+            height: 75px;
+            font-size: 2.2rem
+        }
+
+        .button.is-floating.is-small {
+            width: 45px;
+            height: 45px;
+            font-size: 1.2rem;
+            border-radius: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="../assets/icon (128).png">
+            </a>
+            <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | My Scripts</div>
+            <a role="button" id="main-nav" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-end">
+                <div class="is-flex is-justify-content-center is-flex-direction-column">
+
+                    <div class="navbar-item has-text-centered">
+                        <div class="buttons">
+                            <button class="button is-fullwidth is-success" id="OAuth2">
+                                <span class="icon">
+                                    <i class="fab fa-google"></i>
+                                </span>
+                                Log in with <strong>&nbsp;Google</strong>
+                            </button>
+                        </div>
+                        <span class="is-size-7">Have a problem? </span><a class="is-size-7">Send Feedback.</a>
+                    </div>
+                </div>
+                <!-- <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-danger is-fullwidth">Remove</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    <div class="tabs is-centered mb-0" style="overflow-x: hidden;">
+        <ul>
+            <li><a href="browse.html">Browse</a></li>
+            <li class="is-active"><a href="my_scripts.html">My Scripts</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="about.html">Settings</a></li>
+        </ul>
+    </div>
+    <div class="columns m-auto">
+        <div class="column">
+            <div class="container">
+                <div class="is-flex is-justify-content-center mb-5 mt-0">
+                    <button class="button">New Script</button>
+                </div>
+                <nav class="panel">
+                    <p class="panel-heading has-text-centered">
+                        MPP Script
+                    </p>
+                    <p class="panel-tabs">
+                        <a class="is-active">Script</a>
+                        <a>Description</a>
+                        <a>History</a>
+                        <a>Stats</a>
+                    </p>
+                    <pre>
+                        <code class="language-javascript" id="code" contenteditable="true">
+(function (MPP){
+const myModule = { };
+
+myModule.Init = function (){
+
+};
+
+myModule.Discard = function (){
+
+};
+
+return myModule;
+})(MPP);
+                        </code>
+                    </pre>
+                    <div class="panel-block is-active">
+                        <div class="media">
+                            <div class="media-content">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-block">
+                        <button class="button is-fullwidth is-danger">
+                            Delete
+                        </button>
+                        <button class="button is-fullwidth is-info ml-1">
+                            Submit for review
+                        </button>
+                    </div>
+                </nav>
+                <nav class="panel">
+                    <p class="panel-heading has-text-centered">
+                        Keyboard Script
+                    </p>
+                    <p class="panel-tabs">
+                        <a class="is-active">Script</a>
+                        <a>Info</a>
+                        <a>Stats</a>
+                    </p>
+                    <a class="panel-block is-active">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        bulma
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        marksheet
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        minireset.css
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        jgthms.github.io
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-code-branch" aria-hidden="true"></i>
+                        </span>
+                        daniellowtw/infboard
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-code-branch" aria-hidden="true"></i>
+                        </span>
+                        mojs
+                    </a>
+                    <div class="panel-block">
+                        <button class="button is-light is-fullwidth is-danger">
+                            Request removal
+                        </button>
+                        <button class="button is-fullwidth is-success ml-1" disabled>
+                            Approved!
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/activate.js"></script>
+    <script src="../scripts/oauth2.js"></script>
 </body>
+
 </html>

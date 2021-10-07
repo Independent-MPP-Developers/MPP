@@ -2,12 +2,12 @@
     "name": "MPP",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "Extension for multiplayer piano",
+    "description": "Extension for Multiplayer Piano",
     "icons": {
         "128": "assets/icon (128).png",
         "48": "assets/icon (48).png"
     },
-    "permissions": [ "storage" ],
+    "permissions": [ "storage", "identity" ],
     "content_scripts": [
         {
             "matches": [

@@ -15,7 +15,9 @@
     <script src="../scripts/jQuery.js"></script>
     <!-- CSS Javascript -->
     <script src="../scripts/css-response.js"></script>
-
+    <!-- OAuth Deserialize -->
+    <script src="../scripts/jsrsasign.js"></script>
+    
 </head>
 
 <body>
@@ -25,7 +27,7 @@
                 <img src="../assets/icon (128).png">
             </a>
             <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | Browse</div>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <a role="button" id="main" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -36,23 +38,23 @@
             </div>
             <div class="navbar-end">
                 <div class="is-flex is-justify-content-center is-flex-direction-column">
-
+                    
                     <div class="navbar-item has-text-centered">
                         <div class="buttons">
-                            <a class="button is-light is-fullwidth is-success">
+                            <button class="button is-fullwidth is-success" id="OAuth2">
                                 <span class="icon">
                                     <i class="fab fa-google"></i>
                                 </span>
                                 Log in with <strong>&nbsp;Google</strong>
-                            </a>
+                            </button>
                         </div>
-                        <a class="is-size-7">Send Feedback.</a>
+                        <span class="is-size-7">Have a problem? </span><a class="is-size-7">Send Feedback.</a>
                     </div>
                 </div>
                 <!-- <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-danger is-fullwidth">Remove</a>
-                  </div>
+                    <div class="buttons">
+                        <a class="button is-danger is-fullwidth">Remove</a>
+                    </div>
                 </div> -->
             </div>
         </div>
@@ -77,7 +79,7 @@
         </label>
     </div>
     <div class="is-flex is-justify-content-center">
-
+        
         <div class="columns m-auto">
             <div class="column">
                 <div class="container">
@@ -105,37 +107,37 @@
                                         <a href="index.html">@MajorH5</a>
                                         <span class="icon-text has-text-info">
                                             <span class="icon"
-                                                title="This user has been verified to generate safe scripts.">
-                                                <img src="../assets/shield-check-f.svg">
-                                            </span>
+                                            title="This user has been verified to generate safe scripts.">
+                                            <img src="../assets/shield-check-f.svg">
                                         </span>
-                                    </p>
-                                </div>
-                            </div>
-                            <nav class="level is-mobile">
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Uses</p>
-                                        <p class="title">5,356</p>
-                                    </div>
-                                </div>
-                            </nav>
-                            <div class="content">
-                                This is that adds the ability to see letters on the keyboard;
-                                Along with tons of other features! <br>
-                                <a href="#">#MPP</a> <a href="#">#Script</a> <a href="#">#Visualize</a>
-                                <br>
-                                <br>
-                                <div class="block">
-                                    <div class="buttons">
-                                        <button class="button is-primary is-fullwidth">Use</button>
-                                        <button class="button is-danger is-light is-fullwidth">Report</button>
-                                    </div>
-                                </div>
-                                <time>12:00 AM - 10 October 2021</time>
+                                    </span>
+                                </p>
                             </div>
                         </div>
+                        <nav class="level is-mobile">
+                            <div class="level-item has-text-centered">
+                                <div>
+                                    <p class="heading">Uses</p>
+                                    <p class="title">5,356</p>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="content">
+                            This is that adds the ability to see letters on the keyboard;
+                            Along with tons of other features! <br>
+                            <a href="#">#MPP</a> <a href="#">#Script</a> <a href="#">#Visualize</a>
+                            <br>
+                            <br>
+                            <div class="block">
+                                <div class="buttons">
+                                    <button class="button is-primary is-fullwidth">Use</button>
+                                    <button class="button is-danger is-light is-fullwidth">Report</button>
+                                </div>
+                            </div>
+                            <time>12:00 AM - 10 October 2021</time>
+                        </div>
                     </div>
+                </div>
                 </div>
                 <div class="container">
                     <div class="card">
@@ -162,13 +164,13 @@
                                         <a href="index.html">@MajorH5</a>
                                         <span class="icon-text has-text-info">
                                             <span class="icon"
-                                                title="This user has been verified to generate safe scripts.">
-                                                <img src="../assets/shield-check-f.svg">
-                                            </span>
+                                            title="This user has been verified to generate safe scripts.">
+                                            <img src="../assets/shield-check-f.svg">
                                         </span>
-                                    </p>
-                                </div>
+                                    </span>
+                                </p>
                             </div>
+                        </div>
                             <nav class="level is-mobile">
                                 <div class="level-item has-text-centered">
                                     <div>
@@ -211,6 +213,8 @@
             <li><a class="pagination-link">3</a></li>
         </ul>
     </nav>
-</body>
 
+    <script src="../scripts/activate.js"></script>
+    <script src="../scripts/oauth2.js"></script>
+</body>
 </html>
