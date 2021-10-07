@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPP | My Scripts</title>
-    
+
     <!-- Bulma -->
     <link rel="stylesheet" href="../styles/bulma.css">
     <!-- Font Awesome -->
@@ -104,7 +104,7 @@
         <div class="column">
             <div class="container">
                 <div class="is-flex is-justify-content-center mb-5 mt-0">
-                    <button class="button">New Script</button>
+                    <button class="button" id="new-script" data-target="#new-script-modal">New Script</button>
                 </div>
                 <nav class="panel">
                     <p class="panel-heading has-text-centered">
@@ -119,26 +119,21 @@
                     <pre>
                         <code class="language-javascript" id="code" contenteditable="true">
 (function (MPP){
-const myModule = { };
+    const myModule = { };
 
-myModule.Init = function (){
+    myModule.Init = function (){
 
-};
+    };
 
-myModule.Discard = function (){
+    myModule.Discard = function (){
 
-};
+    };
 
-return myModule;
+    return myModule;
 })(MPP);
+&hellip;
                         </code>
                     </pre>
-                    <div class="panel-block is-active">
-                        <div class="media">
-                            <div class="media-content">
-                            </div>
-                        </div>
-                    </div>
                     <div class="panel-block">
                         <button class="button is-fullwidth is-danger">
                             Delete
@@ -157,42 +152,24 @@ return myModule;
                         <a>Info</a>
                         <a>Stats</a>
                     </p>
-                    <a class="panel-block is-active">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        bulma
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        marksheet
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        minireset.css
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </span>
-                        jgthms.github.io
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-code-branch" aria-hidden="true"></i>
-                        </span>
-                        daniellowtw/infboard
-                    </a>
-                    <a class="panel-block">
-                        <span class="panel-icon">
-                            <i class="fas fa-code-branch" aria-hidden="true"></i>
-                        </span>
-                        mojs
-                    </a>
+                    <pre>
+                        <code class="language-javascript" id="code" contenteditable="true">
+(function (MPP){
+    const myModule = { };
+
+    myModule.Init = function (){
+        // Initialize module
+    };
+
+    myModule.Discard = function (){
+        // Cleanup
+    };
+
+    return myModule;
+})(MPP);
+&hellip;
+                        </code>
+                    </pre>
                     <div class="panel-block">
                         <button class="button is-light is-fullwidth is-danger">
                             Request removal
@@ -205,6 +182,38 @@ return myModule;
             </div>
         </div>
     </div>
+
+    <div class="modal" id="new-script-modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title has-text-centered">Create MPP Script</p>
+                <button class="delete script-exit" data-target="#new-script-modal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <label class="label">Script</label>
+                </div>
+                <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button script-exit" data-target="#new-script-modal">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        $("#new-script").click(function () {
+            var target = $(this).data("target");
+            $(target).addClass("is-active");
+        });
+
+        $(".script-exit").click(function () {
+            var target = $(this).data("target");
+            $(target).removeClass("is-active");
+        });
+    </script>
 
     <script src="../scripts/activate.js"></script>
     <script src="../scripts/oauth2.js"></script>
