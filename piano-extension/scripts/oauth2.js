@@ -50,9 +50,8 @@
             } else {
                 var token = authenticationURI.substring(authenticationURI.indexOf("id_token=") + tokenOffset);
                 token = token.substring(0, token.indexOf("&"));
-                var result = KJUR.jws.JWS.readSafeJSONString(b64utoutf8(token.split(".")[1]));
                 
-                await chromeStorageSet({ [AuthStorageKey]: result }); // ahhhh
+                await chromeStorageSet({ [AuthStorageKey]: token }); // ahhhh
                 updateButton(true);
                 toggleLoad(false);
 

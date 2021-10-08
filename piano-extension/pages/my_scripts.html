@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPP | My Scripts</title>
 
+    <script src="../scripts/onopen.js"></script>
+
     <!-- Bulma -->
     <link rel="stylesheet" href="../styles/bulma.css">
     <!-- Font Awesome -->
@@ -17,6 +19,8 @@
     <script src="../scripts/css-response.js"></script>
     <!-- OAuth Deserialize -->
     <script src="../scripts/jsrsasign.js"></script>
+    <!-- WebSocket -->
+    <script src="../scripts/websocket.js"></script>
 
     <style>
         .button.is-floating {
@@ -104,7 +108,7 @@
         <div class="column">
             <div class="container">
                 <div class="is-flex is-justify-content-center mb-5 mt-0">
-                    <button class="button" id="new-script" data-target="#new-script-modal">New Script</button>
+                    <button class="button modal-enter" data-target="#new-script-modal">New Script</button>
                 </div>
                 <nav class="panel">
                     <p class="panel-heading has-text-centered">
@@ -185,36 +189,46 @@
 
     <div class="modal" id="new-script-modal">
         <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title has-text-centered">Create MPP Script</p>
-                <button class="delete script-exit" data-target="#new-script-modal" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="field">
-                    <label class="label">Script</label>
-                </div>
-                <textarea class="textarea" placeholder="e.g. Hello world"></textarea>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button script-exit" data-target="#new-script-modal">Cancel</button>
-            </footer>
-        </div>
+        <form>
+            <div class="modal-card m-0">
+                <header class="modal-card-head">
+                    <p class="modal-card-title has-text-centered">Create MPP Script</p>
+                    <button class="delete modal-exit" data-target="#new-script-modal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="lavel">
+                        <label class="label">Name*</label>
+                    </div>
+                    <input class="input" name="name" type="text" maxlength="45" placeholder="Name for your script."
+                        required>
+                    <p><br></p>
+                    <div class="field">
+                        <label class="label">Description*</label>
+                    </div>
+                    <textarea name="description" class="textarea" maxlength="500"
+                        placeholder="Description of your script (HTML SUPPORTED)." required></textarea>
+                    <p><br></p>
+                    <div class="field">
+                        <label class="label">Script*</label>
+                    </div>
+                    <textarea name="source" class="textarea" placeholder="Paste script here." required></textarea>
+                    <p><br></p>
+                    <div class="field">
+                        <label class="label">Image</label>
+                    </div>
+                    <input name="image" type="file" accept="image/png, image/jpeg, image/jpg">
+                </section>
+                <footer class="modal-card-foot">
+                    <button type="submit" class="button is-success submit">Submit</button>
+                    <button class="button modal-exit" data-target="#new-script-modal">Cancel</button>
+                </footer>
+            </div>
+        </form>
     </div>
 
-    <script>
-        $("#new-script").click(function () {
-            var target = $(this).data("target");
-            $(target).addClass("is-active");
-        });
-
-        $(".script-exit").click(function () {
-            var target = $(this).data("target");
-            $(target).removeClass("is-active");
-        });
-    </script>
-
+    <script src="../scripts/activate.js"></script>
+    <script src="../scripts/newscript.js"></script>
+    <script src="../scripts/modal.js"></script>
     <script src="../scripts/activate.js"></script>
     <script src="../scripts/oauth2.js"></script>
 </body>

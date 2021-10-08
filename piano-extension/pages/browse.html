@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
+    <canvas id="Canvas" style="display: none;"></canvas>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPP | Browse</title>
+
+    <script src="../scripts/onopen.js"></script>
 
     <!-- Bulma -->
     <link rel="stylesheet" href="../styles/bulma.css">
@@ -17,7 +20,10 @@
     <script src="../scripts/css-response.js"></script>
     <!-- OAuth Deserialize -->
     <script src="../scripts/jsrsasign.js"></script>
-    
+    <!-- WebSocket -->
+    <script src="../scripts/browse.js"></script>
+    <script src="../scripts/websocket.js"></script>
+
 </head>
 
 <body>
@@ -38,7 +44,7 @@
             </div>
             <div class="navbar-end">
                 <div class="is-flex is-justify-content-center is-flex-direction-column">
-                    
+
                     <div class="navbar-item has-text-centered">
                         <div class="buttons">
                             <button class="button is-fullwidth is-success" id="OAuth2">
@@ -79,55 +85,55 @@
         </label>
     </div>
     <div class="is-flex is-justify-content-center">
-        
+
         <div class="columns m-auto">
-            <div class="column">
-                <div class="container">
+            <div class="column" id="script-container">
+
+                <div class="container is-hidden" id="script-template">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">
-                                Keyboard Script
+                            <p class="card-header-title script-title">
+                                Placeholder Title
                             </p>
                         </header>
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="../assets/piano.png">
+                                <img class="script-image" src="../assets/piano.png">
                             </figure>
                         </div>
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-48x48">
-                                        <img src="../assets/piano.png">
+                                        <img class="script-creator-image" src="../assets/piano.png">
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">Keyboard Script</p>
+                                    <p class="title is-4 script-title">Placeholder Title</p>
                                     <p class="subtitle is-6">
-                                        <a href="index.html">@MajorH5</a>
+                                        <a href="index.html" class="script-username">@Anonymous</a>
                                         <span class="icon-text has-text-info">
-                                            <span class="icon"
-                                            title="This user has been verified to generate safe scripts.">
-                                            <img src="../assets/shield-check-f.svg">
+                                            <span class="icon is-hidden script-verification"
+                                                title="This user has been verified to generate safe scripts.">
+                                                <img src="../assets/shield-check-f.svg">
+                                            </span>
                                         </span>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                        <nav class="level is-mobile">
-                            <div class="level-item has-text-centered">
-                                <div>
-                                    <p class="heading">Uses</p>
-                                    <p class="title">5,356</p>
+                                    </p>
                                 </div>
                             </div>
-                        </nav>
-                        <div class="content">
-                            This is that adds the ability to see letters on the keyboard;
-                            Along with tons of other features! <br>
-                            <a href="#">#MPP</a> <a href="#">#Script</a> <a href="#">#Visualize</a>
-                            <br>
-                            <br>
+                            <nav class="level is-mobile">
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Uses</p>
+                                        <p class="title script-use">0</p>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="content script-description">
+                                This is that adds the ability to see letters on the keyboard;
+                                Along with tons of other features! <br>
+                                <a href="#">#MPP</a> <a href="#">#Script</a> <a href="#">#Visualize</a>
+                            </div>
                             <div class="block">
                                 <div class="buttons">
                                     <button class="button is-primary is-fullwidth">Use</button>
@@ -135,70 +141,6 @@
                                 </div>
                             </div>
                             <time>12:00 AM - 10 October 2021</time>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="container">
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                MPP Code Bot
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="../assets/placeholder-code.png">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img src="../assets/piano.png">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4">MPP Code Bot</p>
-                                    <p class="subtitle is-6">
-                                        <a href="index.html">@MajorH5</a>
-                                        <span class="icon-text has-text-info">
-                                            <span class="icon"
-                                            title="This user has been verified to generate safe scripts.">
-                                            <img src="../assets/shield-check-f.svg">
-                                        </span>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                            <nav class="level is-mobile">
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Uses</p>
-                                        <p class="title">7,870</p>
-                                    </div>
-                                </div>
-                            </nav>
-                            <div class="content">
-                                This script will give you access to a MPP Code Bot allowing you
-                                to have:
-                                <ul>
-                                    <li>Room Commands</li>
-                                    <li>MIDI Player</li>
-                                    <li>Cool Keyboard Commands</li>
-                                </ul>
-                                <br>
-                                <a href="#">#MPP</a> <a href="#">#Script</a> <a href="#">#Bot</a>
-                                <br>
-                                <br>
-                                <div class="block">
-                                    <div class="buttons">
-                                        <button class="button is-danger is-fullwidth">Remove</button>
-                                        <button class="button is-danger is-light is-fullwidth">Report</button>
-                                    </div>
-                                </div>
-                                <time>03:02 AM - 09 October 2021</time>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,4 +159,5 @@
     <script src="../scripts/activate.js"></script>
     <script src="../scripts/oauth2.js"></script>
 </body>
+
 </html>

@@ -7,7 +7,9 @@
         "128": "assets/icon (128).png",
         "48": "assets/icon (48).png"
     },
-    "key": "_",
+    "ws_uri": "wss://mppextensionserver.majorh5.repl.co/",
+    "ws_reconnection_time": 3000,
+    "key": "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGmFMUs8cZFnmj4IxKOlR45Z+xFwMWslk06DlEM4XVReBg4s7RjSA+46pEI0EJBTx/WATi3RWWNHHw5Z7Ok84uJyuYACK1R2LFHlsRhx215iiAAeuoXnS9WHKaFTpRUJaSqz0QGV5BV9jRvQBp2mpTeBOmMh2C7MSyf75v8dmqL7Qg7AMwLF9ZXXq9lpH8X55nUnP4UCrO4t8dtTd7hQ90Vfe5Ijo8mMP+4wvJVtmhc34BMCsjMIWog3RCz378rNL+JBrgBvwTajwhSDTOjvcSOke99ZGunS32rPbhWcsi0SVPGio8QXLX+9aF013JQIIpQDpPjwhoWutuMQtAXk15AgMBAAECggEAAjGcUwFt5idsXPyzPAjYgPSOFCwZh60yb6jO5M5Eu2ov/CNWmXQWRTo+ryLsZN5oOyK50heTCu4wdzK9fibIlilZXE6zE3QoNt56xHms62LxSKxiF1bsx0su9T1dtVh/LfwC2uF23AtYV4UfmCvBH9ksRA+avxpLuB+RtwWcS+VBmeDzxzv/nvluLuPa60URNFdvTATnMhQLO1gfw9FL381sWhE3w3gnOPk53igjovSNYs2+Un+Hc4Ow2ho4DwU55Mr1sR0lA6qgNaMXt8YBsPCoinMb9kgfHwCPrAC9Kw7Gk5UQasNsvAO3BSlnuik6ekru8tY5h7T/AQ+ygFII0QKBgQDvluE0M+aRu649rlwebzD6D2V4UvbsHe9B8p59FWaCn9IB9JKW+H/ldlPJ/rnmjS0EHAAoQBRmK0twLv1zByOJOdZJdae3hqyn+Vu82u3SqiGe68nNg0OA+Y3x2T+g9Di9HnfetHYBVWF6XTY7/gZ5eX3fkNhoD0h4Ks9PALXJqQKBgQDUMp9ULAuCKLHR9sV5NZRup/+7/1S4JguBcwpuVYlvXyxfNNKl5WckHuCdQZYNswJyhTW+DcIDoHiGCzhnjFqghwxj/a4BD+F/2SNnPyY3PZVjUBeNokRNR0GVIph9rUCXF/5WYGiBsdP4v8AL1O/uxuw3YG3q+CiUVcWjUBLnUQKBgBcBgOx3U1uJDwkjNftCKAzK765nIQi5MyE8/9T4+hfu6sZ/SpguknFhNFiAGi+2PK1ZVvaGeK7610qVaIbkF5h0skvpfUpVJz0V56Yxy4ZgCcxtzbnrMc8vp16iwsZczRnz1ATRhUdJgIu0aaHHGa4OaXTPPsh3Nzk6ux9V7R7JAoGBAKjpQvr1tJN/YU0Jalf51pXfFSrJLN8JKc95i6wYWrZUxDVlDukPmvKdwZ5sPs3Y2PHgJ8+JlA7fBhFtjRCgIOP3nF1b6c7enVnvtsbQ9dKzKt9LOfR8XnJFbmcQiuI/r1KWvtZzF71lmJ5BxNWmQveHUTEjiVuo/mRVgmVlsCaBAoGAYkTcbzBvh9YXBXtLheC6C62HUGd+naRV7ur8+eKyNHDmalEFwbxnQgOT8y1mzj45xZZGh6Jtw+9oTvPXsswhGhj4htRd3/LhqJC2hn/xcYfJrCxoGR8/IqEdoG9bU/xZVHf2Y8yDEZnM8Wst6xfa77oVM42nzFeAsiZvg+WYWtI=",
     "permissions": [ "storage", "identity" ],
     "content_scripts": [
         {
