@@ -87,10 +87,19 @@ function connectMPPEWS() {
     window.mppews = new WebSocket(WS_URI);
     mppews.onclose = () => setTimeout(connectMPPEWS, WS_RECON_TIME);
     mppews.onopen = () => { console.log('Websocket open') };
-    mppews.onmessage = ({ data }) => { };
+    mppews.onmessage = ({ data }) => {
+        try {
+            data = JSON.parse(data);
+        } catch (e) { return; };
+
+        if (data.error === 'Insufficient permissions.'){
+            // Do stuff
+            // window.location.href = "/account"
+        };
+    };
     mppews.onerror = (error) => { };
 
-    for (let i = 0 ; i < OnOpen.length ; i++){
+    for (let i = 0; i < OnOpen.length; i++) {
         var func = OnOpen[i];
         mppews.addEventListener("open", func);
     };

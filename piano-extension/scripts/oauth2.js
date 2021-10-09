@@ -34,11 +34,11 @@
         if (IN_FLOW) {
             return false;
         };
-        
+
         async function Auth(authenticationURI) {
             var chromeError = chrome.runtime.lastError;
             var tokenOffset = 9;
-            
+
             if (chromeError) {
                 console.error('Error in initiating authentication flow: ', chromeError.message)
 
@@ -50,23 +50,26 @@
             } else {
                 var token = authenticationURI.substring(authenticationURI.indexOf("id_token=") + tokenOffset);
                 token = token.substring(0, token.indexOf("&"));
-                
+
                 await chromeStorageSet({ [AuthStorageKey]: token }); // ahhhh
                 updateButton(true);
                 toggleLoad(false);
 
+                var login = JSON.stringify({ request: 'login', payload: {}, token: token });
+                mppews.send(login);
+
                 SIGNED_IN = true
                 IN_FLOW = false;
-                
+
                 return true;
             };
         };
-        
+
         async function DeAuth() {
             await chromeStorageSet({ [AuthStorageKey]: null }); // Handle errors ...?
             window.location.reload();
         };
-        
+
         toggleLoad(true);
         IN_FLOW = true;
 

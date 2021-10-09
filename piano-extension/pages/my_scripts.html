@@ -19,8 +19,6 @@
     <script src="../scripts/css-response.js"></script>
     <!-- OAuth Deserialize -->
     <script src="../scripts/jsrsasign.js"></script>
-    <!-- WebSocket -->
-    <script src="../scripts/websocket.js"></script>
 
     <style>
         .button.is-floating {
@@ -57,7 +55,7 @@
     </style>
 </head>
 
-<body>
+<body style="min-height: 600px;">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
@@ -106,73 +104,19 @@
     </div>
     <div class="columns m-auto">
         <div class="column">
-            <div class="container">
+            <div class="container script-container">
                 <div class="is-flex is-justify-content-center mb-5 mt-0">
-                    <button class="button modal-enter" data-target="#new-script-modal">New Script</button>
+                    <button class="button new-butt" data-target="#new-script-modal">New Script</button>
                 </div>
-                <nav class="panel">
-                    <p class="panel-heading has-text-centered">
-                        MPP Script
-                    </p>
-                    <p class="panel-tabs">
-                        <a class="is-active">Script</a>
-                        <a>Description</a>
-                        <a>History</a>
-                        <a>Stats</a>
-                    </p>
-                    <pre>
-                        <code class="language-javascript" id="code" contenteditable="true">
-(function (MPP){
-    const myModule = { };
-
-    myModule.Init = function (){
-
-    };
-
-    myModule.Discard = function (){
-
-    };
-
-    return myModule;
-})(MPP);
-&hellip;
-                        </code>
-                    </pre>
-                    <div class="panel-block">
-                        <button class="button is-fullwidth is-danger">
-                            Delete
-                        </button>
-                        <button class="button is-fullwidth is-info ml-1">
-                            Submit for review
-                        </button>
-                    </div>
-                </nav>
-                <nav class="panel">
-                    <p class="panel-heading has-text-centered">
-                        Keyboard Script
-                    </p>
+                <nav class="panel script-template is-hidden">
+                    <p class="panel-heading has-text-centered script-title"></p>
                     <p class="panel-tabs">
                         <a class="is-active">Script</a>
                         <a>Info</a>
                         <a>Stats</a>
                     </p>
                     <pre>
-                        <code class="language-javascript" id="code" contenteditable="true">
-(function (MPP){
-    const myModule = { };
-
-    myModule.Init = function (){
-        // Initialize module
-    };
-
-    myModule.Discard = function (){
-        // Cleanup
-    };
-
-    return myModule;
-})(MPP);
-&hellip;
-                        </code>
+                        <code></code>
                     </pre>
                     <div class="panel-block">
                         <button class="button is-light is-fullwidth is-danger">
@@ -189,7 +133,7 @@
 
     <div class="modal" id="new-script-modal">
         <div class="modal-background"></div>
-        <form>
+        <form action="#">
             <div class="modal-card m-0">
                 <header class="modal-card-head">
                     <p class="modal-card-title has-text-centered">Create MPP Script</p>
@@ -219,14 +163,16 @@
                     <input name="image" type="file" accept="image/png, image/jpeg, image/jpg">
                 </section>
                 <footer class="modal-card-foot">
-                    <button type="submit" class="button is-success submit">Submit</button>
+                    <button type="submit" class="button is-success submit" title="Clicking this will send your script to be reviewed and publically posted to the browse page.">Publish</button>
                     <button class="button modal-exit" data-target="#new-script-modal">Cancel</button>
                 </footer>
             </div>
         </form>
     </div>
 
+    <script src="../scripts/parsemyscripts.js"></script>
     <script src="../scripts/activate.js"></script>
+    <script src="../scripts/websocket.js"></script>
     <script src="../scripts/newscript.js"></script>
     <script src="../scripts/modal.js"></script>
     <script src="../scripts/activate.js"></script>

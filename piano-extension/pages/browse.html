@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <canvas id="Canvas" style="display: none;"></canvas>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +19,6 @@
     <script src="../scripts/css-response.js"></script>
     <!-- OAuth Deserialize -->
     <script src="../scripts/jsrsasign.js"></script>
-    <!-- WebSocket -->
-    <script src="../scripts/browse.js"></script>
-    <script src="../scripts/websocket.js"></script>
 
 </head>
 
@@ -136,7 +132,7 @@
                             </div>
                             <div class="block">
                                 <div class="buttons">
-                                    <button class="button is-primary is-fullwidth">Use</button>
+                                    <button class="button is-primary is-fullwidth toggle">Use</button>
                                     <button class="button is-danger is-light is-fullwidth">Report</button>
                                 </div>
                             </div>
@@ -150,12 +146,16 @@
     <div class="modal" id="report-modal"></div>
     <nav class="pagination is-centered">
         <ul class="pagination-list">
-            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">1</a></li>
-            <li><a class="pagination-link">2</a></li>
-            <li><a class="pagination-link">3</a></li>
+            <li><a class="pagination-link page-move" data-move="-">&lt;</a></li>
+            <li><a class="pagination-link is-current pag-1 pag">1</a></li>
+            <li><a class="pagination-link pag-2 pag">2</a></li>
+            <li><a class="pagination-link pag-3 pag">3</a></li>
+            <li><a class="pagination-link page-move" data-move="+">&gt;</a></li>
         </ul>
     </nav>
 
+    <script src="../scripts/browse.js"></script>
+    <script src="../scripts/websocket.js"></script>
     <script src="../scripts/activate.js"></script>
     <script src="../scripts/oauth2.js"></script>
 </body>

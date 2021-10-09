@@ -3,8 +3,9 @@
     var submitImage = null;
 
     async function createScript(event) {
+        event.preventDefault()
         const token = (await chromeStorageGet(AuthStorageKey))[AuthStorageKey];
-        console.log(token ? true : false)
+
         if (!token)
             return;
 
@@ -24,7 +25,6 @@
             token: token
         })).response;
 
-        console.log(result);
     };
 
     window.createScript = createScript;
@@ -46,7 +46,7 @@
                 submitImage = event.target.result
             };
             reader.readAsDataURL(file);
-        }else{
+        } else {
             submitImage = null;
         };
     });
