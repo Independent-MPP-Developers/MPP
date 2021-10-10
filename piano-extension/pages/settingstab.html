@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPP | Settings</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MPP | Settings</title>
 
-    <script src="../scripts/onopen.js"></script>
+        <script src="../scripts/onopen.js"></script>
 
-    <!-- Bulma -->
-    <link rel="stylesheet" href="../styles/bulma.css">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/cc0302d791.js" crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="../scripts/jQuery.js"></script>
-    <!-- CSS Javascript -->
-    <script src="../scripts/css-response.js"></script>
-    <!-- OAuth Deserialize -->
+        <!-- Bulma -->
+        <link rel="stylesheet" href="../styles/bulma.css">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/cc0302d791.js" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="../scripts/jQuery.js"></script>
+        <!-- CSS Javascript -->
+        <script src="../scripts/css-response.js"></script>
+        <!-- OAuth Deserialize -->
     <script src="../scripts/jsrsasign.js"></script>
-</head>
+    </head>
 
-<body style="min-height: 600px;">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <img src="../assets/icon (128).png">
-            </a>
-            <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | Settings</div>
-            <a role="button" id="main" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu">
-            <div class="navbar-start">
+    <body style="min-height: 600px;">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="../assets/icon (128).png">
+                </a>
+                <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | Settings</div>
+                <a role="button" id="main" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-            <div class="navbar-end">
-                <div class="is-flex is-justify-content-center is-flex-direction-column">
-
-                    <div class="navbar-item has-text-centered">
-                        <div class="buttons">
-                            <button class="button is-fullwidth is-success" id="OAuth2">
-                                <span class="icon">
-                                    <i class="fab fa-google"></i>
-                                </span>
-                                Log in with <strong>&nbsp;Google</strong>
-                            </button>
-                        </div>
-                        <span class="is-size-7">Have a problem? </span><a class="is-size-7">Send Feedback.</a>
-                    </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
                 </div>
-                <!-- <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-danger is-fullwidth">Remove</a>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </nav>
-    <div class="tabs is-centered" style="overflow-x: hidden;">
-        <ul>
-            <li><a href="browse.html">Browse</a></li>
-            <li><a href="my_scripts.html">My Scripts</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li class="is-active"><a href="settingstab.html">Settings</a></li>
-        </ul>
-    </div>
+                <div class="navbar-end">
+                    <div class="is-flex is-justify-content-center is-flex-direction-column">
 
+                        <div class="navbar-item has-text-centered">
+                            <div class="buttons">
+                                <button class="button is-fullwidth is-success" id="OAuth2">
+                                    <span class="icon">
+                                        <i class="fab fa-google"></i>
+                                    </span>
+                                    Log in with <strong>&nbsp;Google</strong>
+                                </button>
+                            </div>
+                            <span class="is-size-7">Have a problem? </span><a class="is-size-7">Send Feedback.</a>
+                        </div>
+                    </div>
+                    <!-- <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-danger is-fullwidth">Remove</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+        <div class="tabs is-centered" style="overflow-x: hidden;">
+            <ul>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="my_scripts.html">My Scripts</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li class="is-active"><a href="settingstab.html">Settings</a></li>
+            </ul>
+        </div>
+    <script src="../scripts/parsemyscripts.js"></script>
+    <script src="../scripts/activate.js"></script>
+    <script src="../scripts/websocket.js"></script>
+    <script src="../scripts/newscript.js"></script>
+    <script src="../scripts/modal.js"></script>
+    <script src="../scripts/oauth2.js"></script>
+    </body>
 </html>
