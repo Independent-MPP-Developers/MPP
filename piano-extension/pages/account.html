@@ -71,7 +71,7 @@
     </div>
     <div class="card">
         <div class="card-image">
-            <figure class="image is-4by3">
+            <figure class="image is-4by3 is-clickable">
                 <img src="../assets/piano.png" alt="Placeholder image">
             </figure>
         </div>
@@ -80,14 +80,14 @@
                 <div class="lable">
                     <label class="label">Nickname</label>
                 </div>
-                <input type="text" name="name" class="input" maxlength="40" placeholder="Your nickname here..." required></input>
+                <input type="text" name="name" class="input" maxlength="40" placeholder="Your nickname here..."></input>
                 <p><br></p>
                 <div class="lable">
                     <label class="label">Description</label>
                 </div>
                 <textarea name="description" class="textarea" maxlength="190" placeholder="Description about you..."></textarea>
                 <p><br></p>
-                    <button class="button is-success">Save</button>
+                    <button class="button is-success is-static" id="infochange">Save</button>
             </div>
         </div>
     </div>
@@ -98,5 +98,4 @@
     <script src="../scripts/modal.js"></script>
     <script src="../scripts/oauth2.js"></script>
 </body>
-
 </html>
