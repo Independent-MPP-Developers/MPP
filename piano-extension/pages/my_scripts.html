@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPP | My Scripts</title>
+    <title>MPP | <span t="2">My Scripts</span></title>
 
     <script src="../scripts/onopen.js"></script>
 
@@ -61,7 +61,7 @@
             <a class="navbar-item" href="#">
                 <img src="../assets/icon (128).png">
             </a>
-            <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | My Scripts</div>
+            <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | <span t="2">My Scripts</span></div>
             <a role="button" id="main-nav" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -83,7 +83,7 @@
                                 Log in with <strong>&nbsp;Google</strong>
                             </button>
                         </div>
-                        <span class="is-size-7">Have a problem? </span><a class="is-size-7">Send Feedback.</a>
+                        <span class="is-size-7" t="5">Have a problem? </span><a class="is-size-7" t="6">Send Feedback.</a>
                     </div>
                 </div>
                 <!-- <div class="navbar-item">
@@ -96,34 +96,34 @@
     </nav>
     <div class="tabs is-centered mb-0" style="overflow-x: hidden;">
         <ul>
-            <li><a href="browse.html">Browse</a></li>
-            <li class="is-active"><a href="my_scripts.html">My Scripts</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="settingstab.html">Settings</a></li>
+            <li><a href="browse.html" t="1">Browse</a></li>
+            <li class="is-active"><a href="my_scripts.html" t="2">My Scripts</a></li>
+            <li><a href="account.html" t="3">Account</a></li>
+            <li><a href="settingstab.html" t="4">Settings</a></li>
         </ul>
     </div>
     <div class="columns m-auto">
         <div class="column">
             <div class="container script-container">
                 <div class="is-flex is-justify-content-center mb-5 mt-0">
-                    <button class="button new-butt" data-target="#new-script-modal">New Script</button>
+                    <button class="button new-butt" data-target="#new-script-modal" t="8">New Script</button>
                 </div>
                 <nav class="panel script-template is-hidden">
                     <p class="panel-heading has-text-centered script-title"></p>
                     <p class="panel-tabs">
-                        <a class="is-active">Script</a>
-                        <a>Info</a>
-                        <a>Stats</a>
+                        <a class="is-active" t="9">Script</a>
+                        <a t="10">Info</a>
+                        <a t="11">Stats</a>
                     </p>
                     <pre>
                         <code></code>
                     </pre>
                     <div class="panel-block">
                         <button class="button is-light is-fullwidth is-danger">
-                            Request removal
+                            <span t="12">Request removal</span>
                         </button>
                         <button class="button is-fullwidth is-success ml-1" disabled>
-                            Approved!
+                            <span t="13">Approved!</span>
                         </button>
                     </div>
                 </nav>
@@ -141,30 +141,30 @@
                 </header>
                 <section class="modal-card-body">
                     <div class="lavel">
-                        <label class="label">Name*</label>
+                        <label class="label" t="15">Name*</label>
                     </div>
                     <input class="input" name="name" type="text" maxlength="45" placeholder="Name for your script."
                         required>
                     <p><br></p>
                     <div class="field">
-                        <label class="label">Description*</label>
+                        <label class="label" t="16">Description*</label>
                     </div>
                     <textarea name="description" class="textarea" maxlength="500"
                         placeholder="Description of your script (HTML SUPPORTED)." required></textarea>
                     <p><br></p>
                     <div class="field">
-                        <label class="label">Script*</label>
+                        <label class="label" t="17">Script*</label>
                     </div>
                     <textarea name="source" class="textarea" placeholder="Paste script here." required></textarea>
                     <p><br></p>
                     <div class="field">
-                        <label class="label">Image</label>
+                        <label class="label" t="18">Image</label>
                     </div>
                     <input name="image" type="file" accept="image/png, image/jpeg, image/jpg">
                 </section>
                 <footer class="modal-card-foot">
-                    <button type="submit" class="button is-success submit" title="Clicking this will send your script to be reviewed and publically posted to the browse page.">Publish</button>
-                    <button class="button modal-exit" data-target="#new-script-modal">Cancel</button>
+                    <button type="submit" class="button is-success submit" title="Clicking this will send your script to be reviewed and publically posted to the browse page." t="19">Publish</button>
+                    <button class="button modal-exit" data-target="#new-script-modal" t="20">Cancel</button>
                 </footer>
             </div>
         </form>
@@ -176,6 +176,7 @@
     <script src="../scripts/newscript.js"></script>
     <script src="../scripts/modal.js"></script>
     <script src="../scripts/oauth2.js"></script>
+    <script src="../scripts/translate.js"></script>
 </body>
 
 </html>

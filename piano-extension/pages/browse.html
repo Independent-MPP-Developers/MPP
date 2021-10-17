@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPP | Browse</title>
+    <title>MPP | <span t="1">Browse</span></title>
 
     <script src="../scripts/onopen.js"></script>
 
@@ -28,7 +28,7 @@
             <a class="navbar-item" href="#">
                 <img src="../assets/icon (128).png">
             </a>
-            <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | Browse</div>
+            <div class="navbar-item"><strong>MPP</strong>&nbsp;Extension | <span t="1">Browse</span></div>
             <a role="button" id="main" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -50,7 +50,7 @@
                                 Log in with <strong>&nbsp;Google</strong>
                             </button>
                         </div>
-                        <span class="is-size-7">Have a problem? </span><a class="is-size-7">Send Feedback.</a>
+                        <span class="is-size-7" t="5">Have a problem? </span><a class="is-size-7" t="6">Send Feedback.</a>
                     </div>
                 </div>
                 <!-- <div class="navbar-item">
@@ -63,16 +63,16 @@
     </nav>
     <div class="tabs is-centered" style="overflow-x: hidden;">
         <ul>
-            <li class="is-active"><a href="browse.html">Browse</a></li>
-            <li><a href="my_scripts.html">My Scripts</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="settingstab.html">Settings</a></li>
+            <li class="is-active"><a href="browse.html" t="1">Browse</a></li>
+            <li><a href="my_scripts.html" t="2">My Scripts</a></li>
+            <li><a href="account.html" t="3">Account</a></li>
+            <li><a href="settingstab.html" t="4">Settings</a></li>
         </ul>
     </div>
     <div class="is-flex is-justify-content-center">
         <label class="checkbox" title="See scripts that are posted by verified users only.">
             <input type="checkbox">
-            Verified Only.
+            <span t="7">Verified Only.</span>
         </label>
     </div>
     <div class="is-flex is-justify-content-center">
@@ -148,6 +148,7 @@
     <script src="../scripts/websocket.js"></script>
     <script src="../scripts/activate.js"></script>
     <script src="../scripts/oauth2.js"></script>
+    <script src="../scripts/translate.js"></script>
 </body>
 
 </html>
