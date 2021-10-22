@@ -100,9 +100,18 @@
             "Drak mode",
             "Темный режим"
         ],
-        "26":[],
-        "27":[],
-        "28":[],
+        "26":[
+            "Create MPP Script",
+            "Создать MPP скрипт"
+        ],
+        "27":[
+            "Name for your script.",
+            "Название твоего скрипта."
+        ],
+        "28":[
+            "Description of your script (HTML SUPPORTED).",
+            "Описание вашего скрипта (HTML поддерживается)"
+        ],
         "29":[],
         "30":[],
         "31":[],
@@ -125,6 +134,7 @@
             
             for(const element of translateList){
                 element.innerText =  translateResult[languageIndex];
+                element.placeholder = translateResult[languageIndex];
             };
         };
 
