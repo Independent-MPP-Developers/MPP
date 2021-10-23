@@ -1,6 +1,6 @@
 (function (window) {
     const storage = window.chrome.storage; // Grab chrome storage
-    var inputButtons = $('input[save=""]');
+    var inputButtons = $('button[save=""]');
 
     function chromeStorageSet(object) { // Set chrome storage object via promise
         return new Promise(resolve => {
