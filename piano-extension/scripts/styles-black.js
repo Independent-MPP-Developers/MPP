@@ -1,5 +1,5 @@
 var link = document.getElementById("theme-link");
-$("button").click(function(){dispatchEvent(new CustomEvent("colorMode", {detail: true}))});
+$("#Dark-mode-btn").click(function(){dispatchEvent(new CustomEvent("colorMode", {detail: true}))});
 
 window.addEventListener('colorMode', ChangeTheme);
 
