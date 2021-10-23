@@ -1,11 +1,26 @@
 var link = document.getElementById("theme-link");
-
-function ChangeTheme(event)
-{
-    console.log("dark mode yes");
-    var theme = event.detail ? 'https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css' : '../styles/bulma.css';
-    link.setAttribute("href", theme);
-}
+$("button").click(function(){dispatchEvent(new CustomEvent("colorMode", {detail: true}))});
 
 window.addEventListener('colorMode', ChangeTheme);
-$("button").click(function(){dispatchEvent(new CustomEvent("colorMode", {detail: true}))})
+
+
+
+
+function ChangeTheme()
+{
+    let lightTheme = "../styles/bulma.css";
+    let darkTheme = "https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css";
+    var currTheme = link.getAttribute("href");
+    var theme = "";
+    if(currTheme == lightTheme)
+    {
+   	    currTheme = darkTheme;
+   	    theme = "dark";
+    }
+    else
+    {    
+   	    currTheme = lightTheme;
+   	    theme = "light";
+    }
+    link.setAttribute("href", currTheme);
+} 
