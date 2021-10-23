@@ -106,15 +106,24 @@
         ],
         "27":[
             "Name for your script.",
-            "Название твоего скрипта."
+            "Название вашего скрипта."
         ],
         "28":[
             "Description of your script (HTML SUPPORTED).",
             "Описание вашего скрипта (HTML поддерживается)"
         ],
-        "29":[],
-        "30":[],
-        "31":[],
+        "29":[
+            "Paste script here.",
+            "Вставьте код скрипта сюда."
+        ],
+        "30":[
+            "Your nickname here.",
+            "Ваш никнейм здесь."
+        ],
+        "31":[
+            "Description about you.",
+            "Опишите себя."
+        ],
         "32":[],
         "33":[],
         "34":[],
@@ -132,10 +141,12 @@
             const translateResult = TRAN_TABLE[id];
             const translateList = document.querySelectorAll(`[t="${id}"]`);
             
-            for(const element of translateList){
-                element.innerText =  translateResult[languageIndex];
-                element.placeholder = translateResult[languageIndex];
-            };
+                for(const element of translateList){
+                    if (!element.matches(`textarea[t="${id}"]`)) {
+                        element.innerText =  translateResult[languageIndex];
+                    };
+                    element.placeholder = translateResult[languageIndex];
+                };
         };
 
         return true;
