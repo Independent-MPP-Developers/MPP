@@ -2,7 +2,8 @@ var link = document.getElementById("theme-link");
 
 function ChangeTheme(event)
 {
-    var theme = event.detail ? 'styles-dark.css' : 'styles.css';
+    console.log("dark yes");
+    var theme = event.detail ? 'https://unpkg.com/bulma-prefers-dark' : '../styles/bulma.css';
     link.setAttribute("href", theme);
 }
 
