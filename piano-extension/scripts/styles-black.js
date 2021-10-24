@@ -23,4 +23,4 @@ function ChangeTheme()
    	    theme = "light";
     }
     link.setAttribute("href", currTheme);
-} 
+}
