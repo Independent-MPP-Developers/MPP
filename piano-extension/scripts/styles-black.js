@@ -23,4 +23,20 @@ function ChangeTheme()
    	    theme = "light";
     }
     link.setAttribute("href", currTheme);
+    localStorage.setItem("theme", theme);
+}
+
+window.onload=function(){
+    var currTheme = link.getAttribute("href");
+    let lightTheme = "../styles/bulma.css";
+    let darkTheme = "https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css";
+    if(localStorage.getItem("theme") == "light")
+    {
+        currTheme = lightTheme;
+    }
+    else
+    {
+        currTheme = darkTheme;
+    }
+    link.setAttribute("href", currTheme);
 }
