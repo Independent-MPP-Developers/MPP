@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
     const storage = window.chrome.storage; // Grab chrome storage
     // var inputButtons = $('button[save=""]');
 
@@ -39,7 +39,8 @@
         var event = button.getAttribute('event');
         var key = button.id
 
-        chromeStorageSet({ [key]: state });
+        chromeStorageSet({
+            [key]: state });
         setState(button, state);
         handleEvent(event, state);
     };

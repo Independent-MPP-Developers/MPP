@@ -143,7 +143,10 @@
             
                 for(const element of translateList){
                     if (!element.matches(`textarea[t="${id}"]`)) {
-                        element.innerText =  translateResult[languageIndex];
+                        if (!element.matches(`input[t="${id}"]`)){
+                            element.innerText =  translateResult[languageIndex];
+                            console.log(element)
+                        }
                     };
                     element.placeholder = translateResult[languageIndex];
                 };
