@@ -141,6 +141,11 @@
     justify-content: right!important
 }
 
+.is-clickable {
+    cursor: pointer!important;
+    pointer-events: all!important
+}
+
 .delete::after,
 .delete::before,
 .modal-close::after,
