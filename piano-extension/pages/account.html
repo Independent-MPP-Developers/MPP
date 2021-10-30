@@ -71,8 +71,11 @@
     </div>
     <div class="card">
         <div class="card-image">
-            <figure class="image is-4by3 is-clickable">
-                <img src="../assets/piano.png" alt="Placeholder image">
+            <figure class="image is-4by3">
+                <label>
+                    <img id="img_avatar" src="../assets/piano.png" alt="Placeholder image">
+                    <input id="myfile" type="file" hidden>
+                </label>
             </figure>
         </div>
         <div class="card-content">
@@ -80,12 +83,12 @@
                 <div class="lable">
                     <label class="label" t="21">Nickname</label>
                 </div>
-                <input type="text" name="name" class="input" maxlength="40" t="30" placeholder="Your nickname here."></input>
+                <input id="nick_input" type="text" name="name" class="input change" maxlength="40" t="30" placeholder="Your nickname here."></input>
                 <p><br></p>
                 <div class="lable">
                     <label class="label" t="22">Description</label>
                 </div>
-                <textarea name="description" class="textarea" maxlength="190" t="31" placeholder="Description about you."></textarea>
+                <textarea id="description_input" name="description" class="textarea change" maxlength="190" t="31" placeholder="Description about you."></textarea>
                 <p><br></p>
                     <button class="button is-success is-static" id="infochange"><span t="23">Save</span></button>
             </div>
@@ -99,6 +102,6 @@
     <script src="../scripts/modal.js"></script>
     <script src="../scripts/oauth2.js"></script>
     <script src="../scripts/translate.js"></script>
-    <script src="../scripts/styles-black.js"></script>
+    <script src="../scripts/btn-activate.js"></script>
 </body>
 </html>
