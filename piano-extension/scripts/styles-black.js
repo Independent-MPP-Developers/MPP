@@ -1,17 +1,28 @@
+window.onload=function(){
+    if(localStorage.getItem("theme") == "light")
+    {
+        currTheme = lightTheme;
+    }
+    else
+    {
+        currTheme = darkTheme;
+    }
+    link.setAttribute("href", currTheme);
+}
+
 var link = document.getElementById("theme-link");
 $("#Dark-mode-btn").click(function(){dispatchEvent(new CustomEvent("colorMode", {detail: true}))});
 
 window.addEventListener('colorMode', ChangeTheme);
 
-
+var lightTheme = "../styles/bulma.css";
+var darkTheme = "../styles/bulma-darkly.css";
+var currTheme = link.getAttribute("href");
+var theme = "";
 
 
 function ChangeTheme()
 {
-    let lightTheme = "../styles/bulma.css";
-    let darkTheme = "https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css";
-    var currTheme = link.getAttribute("href");
-    var theme = "";
     if(currTheme == lightTheme)
     {
    	    currTheme = darkTheme;
@@ -24,19 +35,4 @@ function ChangeTheme()
     }
     link.setAttribute("href", currTheme);
     localStorage.setItem("theme", theme);
-}
-
-window.onload=function(){
-    var currTheme = link.getAttribute("href");
-    let lightTheme = "../styles/bulma.css";
-    let darkTheme = "https://jenil.github.io/bulmaswatch/darkly/bulmaswatch.min.css";
-    if(localStorage.getItem("theme") == "light")
-    {
-        currTheme = lightTheme;
-    }
-    else
-    {
-        currTheme = darkTheme;
-    }
-    link.setAttribute("href", currTheme);
 }
