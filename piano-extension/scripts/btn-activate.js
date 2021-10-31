@@ -44,7 +44,7 @@ function ChangeTheme()
     localStorage.setItem("theme", theme);
 }
 
-$(".change").on("keyup", function () {
+$(".change").on("keydown", function () {
     if ($(this).val() == '') {
     } else {
         $('#infochange').removeClass("is-static");
