@@ -1,6 +1,17 @@
+
 // returns saved data
+const AuthStorageKey = "OAUTH2MPPE";
+
+async function updateUser(user_username, user_description) {
+    const token = (await chromeStorageGet(AuthStorageKey))[AuthStorageKey];
+    if (!token) return;
+    mppews.send(JSON.stringify({ request: "update_user", payload: { userUsername: user_username, userDescription: user_description }, token: token }));
+
+}
+
 
 window.onload=function(){
+    
     if(localStorage.getItem("theme") == "light")
     {
         currTheme = lightTheme;
@@ -57,6 +68,9 @@ $(".change").on("keydown", function () {
 $("#infochange").on("click", function () {
     localStorage.setItem("save_changes_nick", document.getElementById("nick_input").value);
     localStorage.setItem("save_changes_description", document.getElementById("description_input").value);
+    var user_username = document.getElementById("nick_input").value;
+    var user_description = document.getElementById("description_input").value;
+    updateUser(user_username, user_description);
     $('#infochange').addClass("is-static");
 });
 
