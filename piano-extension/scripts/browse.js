@@ -35,7 +35,6 @@
         self.find(".script-username").text("@" + scriptInfo.creator).attr("data-id", scriptInfo.creatorID);
         self.find(".script-description").html(scriptInfo.description);
         self.find(".script-use").text(scriptInfo.uses.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
-        // https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
         self.find("time").text(formatDate(scriptInfo.date));
 
         self.appendTo("#script-container");
