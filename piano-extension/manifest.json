@@ -20,7 +20,7 @@
                 "*://*.mppclone.com/*",
                 "*://*.mpp.hri7566.info/*"
             ],
-            "js": [ "scripts/init.js" ]
+            "js": [ "scripts/init.js", "scripts/loadscripts.js" ]
         }
     ],
     "web_accessible_resources": [ "scripts/index.js" ],
