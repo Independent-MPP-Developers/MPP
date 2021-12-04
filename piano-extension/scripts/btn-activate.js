@@ -9,6 +9,12 @@ async function updateUser(user_username, user_description, user_profileImage) {
 
 }
 
+async function deleteScript(){
+    const token = (await chromeStorageGet(AuthStorageKey))[AuthStorageKey];
+    if (!token) return;
+    mppews.send(JSON.stringify({ request: "delete_script", payload: {}, token: token}));
+}
+ 
 
 window.onload=function(){
     
@@ -91,3 +97,9 @@ myfile.onchange = function () {
         reader.readAsDataURL(this.files[0]);
     };
 };
+
+//activating the button to delete the script
+//I need to read a little theoretical part of JS
+$("#request-del-btn").on("click", function () {
+    deleteScript();
+})
