@@ -12,7 +12,7 @@ async function updateUser(user_username, user_description, user_profileImage) {
 async function deleteScript(){
     const token = (await chromeStorageGet(AuthStorageKey))[AuthStorageKey];
     if (!token) return;
-    mppews.send(JSON.stringify({ request: "delete_script", payload: {}, token: token}));
+    mppews.send(JSON.stringify({ request: "delete_script", token: token}));
 }
  
 
@@ -63,14 +63,32 @@ function ChangeTheme()
 
 $(".change").on("keydown", function () {
     if ($(this).val() == '') {
-    } else {
+        return;
+    } 
+    else {
         $('#infochange').removeClass("is-static");
     }
 
 });
 
-// function for saving changes <input>
+//changes the state of the button depending on the content in the elements
+$(".change_script").on("keyup", function () {
+    var inputcount = 0;
+    var scriptInputElement = document.querySelectorAll(`.change_script`);
+    for (const element of scriptInputElement) {
+        if($(element).val() == '') {
+            $('#submit-script-btn').addClass('is-static')
+        }
+        else {
+            inputcount ++;
+        }
+    }
+    if (inputcount == 3) {
+        $('#submit-script-btn').removeClass("is-static");
+    }
+});
 
+// function for saving changes <input>
 $("#infochange").on("click", function () {
     localStorage.setItem("save_changes_nick", document.getElementById("nick_input").value);
     localStorage.setItem("save_changes_description", document.getElementById("description_input").value);
@@ -101,5 +119,5 @@ myfile.onchange = function () {
 //activating the button to delete the script
 //I need to read a little theoretical part of JS
 $("#request-del-btn").on("click", function () {
-    deleteScript();
-})
+    
+});

@@ -49,6 +49,11 @@
             }
         };
     };
+    
+    $("#submit-script-btn").on("click", function () {
+        $(".panel.script-node").remove();
+        setTimeout(fetchPersonalScripts, 2000);
+    });
 
     OnOpen.push(fetchPersonalScripts);
 })(window)

@@ -143,19 +143,19 @@
                     <div class="lavel">
                         <label class="label" t="15">Name*</label>
                     </div>
-                    <input class="input" name="name" type="text" maxlength="45" t="27" placeholder="Name for your script."
+                    <input class="input change_script" name="name" type="text" maxlength="45" t="27" placeholder="Name for your script."
                         required>
                     <p><br></p>
                     <div class="field">
                         <label class="label" t="16">Description*</label>
                     </div>
-                    <textarea name="description" class="textarea" maxlength="500" t="28" 
+                    <textarea name="description" class="textarea change_script" maxlength="500" t="28" 
                         placeholder="Description of your script (HTML SUPPORTED)." required></textarea>
                     <p><br></p>
                     <div class="field">
                         <label class="label" t="17">Script*</label>
                     </div>
-                    <textarea name="source" class="textarea" placeholder="Paste script here." t="29" required></textarea>
+                    <textarea name="source" class="textarea change_script" placeholder="Paste script here." t="29" required></textarea>
                     <p><br></p>
                     <div class="field">
                         <label class="label" t="18">Image</label>
@@ -163,7 +163,7 @@
                     <input name="image" type="file" accept="image/png, image/jpeg, image/jpg">
                 </section>
                 <footer class="modal-card-foot">
-                    <button type="submit" class="button is-success submit" title="Clicking this will send your script to be reviewed and publically posted to the browse page." t="19">Publish</button>
+                    <button id="submit-script-btn" type="submit" data-target="#new-script-modal" class="button is-success submit modal-exit is-static" title="Clicking this will send your script to be reviewed and publically posted to the browse page." t="19">Publish</button>
                     <button class="button modal-exit" data-target="#new-script-modal" t="20">Cancel</button>
                 </footer>
             </div>
