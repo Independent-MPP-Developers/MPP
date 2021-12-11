@@ -18,7 +18,8 @@
                 "*://*.multiplayerpiano.com/*",
                 "*://*.multiplayerpiano.net/*",
                 "*://*.mppclone.com/*",
-                "*://*.mpp.hri7566.info/*"
+                "*://*.mpp.hri7566.info/*",
+                "*://*mpp.autoplayer.space/*"
             ],
             "js": [ "scripts/init.js", "scripts/loadscripts.js" ]
         }
