@@ -19,7 +19,10 @@
                 "*://*.multiplayerpiano.net/*",
                 "*://*.mppclone.com/*",
                 "*://*.mpp.hri7566.info/*",
-                "*://*mpp.autoplayer.space/*"
+                "*://*mpp.autoplayer.space/*",
+                "*://*mppfork.netlify.app/*",
+                "*://*mpp.cedms.jp/*",
+                "*://augustberchelmann.com/piano/*"
             ],
             "js": [ "scripts/init.js", "scripts/loadscripts.js" ]
         }
